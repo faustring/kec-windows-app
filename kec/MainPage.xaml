@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="kec.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kec"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="Karaoke Eat Coins!" HorizontalAlignment="Center" FontSize="24" />
+        <FlipView x:Name="flipView" Height="180" Background="{x:Null}" Margin="0,40,0,0" VerticalAlignment="Top">
+            <Image Source="Assets/banner/01.png" />
+            <Image Source="Assets/banner/02.png" />
+            <Image Source="Assets/banner/03.png" />
+            <Image Source="https://novel.azureedge.net/cover/9791131905074.jpg" />
+        </FlipView>
+        <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal" Height="40" Margin="0,220,0,0" VerticalAlignment="Top">
+            <Button Height="40" Name="naver" Content="네이버" Click="naver_Click"/>
+            <Button Height="40" Name="dcinside" Content="디시인사이드" VerticalAlignment="Bottom" Click="dcinside_Click"/>
+        </StackPanel>
+        <WebView Name="browse" Source="https://m.naver.com" Margin="0,260,0,0" />
+    </Grid>
+</Page>
